@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Search Page</title>
+    <link rel="stylesheet" href="{% static 'ourWebsite/styles3.css'%}">
+</head>
+
+<body>
+    <div class="banner">
+        <br> <br>
+        <div class="navbar">
+            <h1>
+                {{strSearch}}
+            </h1>
+            <div class="buttons">
+                <ul>
+                    <li id="Home"><a href="{%url 'home'%}">Home</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <br><br><br>
+        <div class="searchbody">
+        </div>
+
+
+</body>
+
+
+</html>

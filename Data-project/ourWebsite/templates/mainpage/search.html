@@ -1,0 +1,99 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Search Page</title>
+    <link rel="stylesheet" href="{% static 'ourWebsite/styles3.css'%}">
+</head>
+
+<body>
+    <div class="banner">
+        <br> <br>
+        <div class="navbar">
+            <h1>
+                This is your search result for: {{strSearch}}
+            </h1>
+            <div class="buttons">
+                <ul>
+                    <li id="Home"><a href="{%url 'home'%}">Home</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <br><br><br>
+        <div class="searchbody">
+
+
+            <div class="uniList">
+
+                <table id="table1">
+                    <tr>
+                        <th> Universities </th>
+                        <th> Major </th>
+                        <th> Price per credit </th>
+                    </tr>
+                    <tr>
+                        <td> Lebanese American University</td>
+                        <td> {{major1}}</td>
+                        <td> {{price1}}</td>
+                    </tr>
+                    <tr>
+                        <td> Holy Spirit University of Kaslik</td>
+                        <td> {{major2}}</td>
+                        <td> {{price2}}</td>
+                    </tr>
+                    <tr>
+                        <td> University of Balamand</td>
+                        <td> {{major3}}</td>
+                        <td> {{price3}}</td>
+                    </tr>
+                    <tr>
+                        <td> Notre Dame University</td>
+                        <td> {{major4}}</td>
+                        <td> {{price4}} </td>
+                    </tr>
+                    <tr>
+                        <td> Al Maaref University</td>
+                        <td> {{major5}}</td>
+                        <td> {{price5}}</td>
+                    </tr>
+                    <tr>
+                        <td> American University of Beirut</td>
+                        <td> {{major6}}</td>
+                        <td> {{price6}}</td>
+                    </tr>
+
+                </table>
+
+                </table>
+
+            </div>
+            
+            
+
+        </div>
+        <div class="video"  >
+            <p>
+                This video will give you some tips to choose the best university
+            </p>
+            <br>
+            <iframe src="https://www.youtube.com/embed/IrbI4NlvC6w" id="youtubeVideo">
+    
+            </iframe>
+        </div>
+        
+
+
+
+    </div>
+
+    
+
+
+
+</body>
+
+
+</html>
