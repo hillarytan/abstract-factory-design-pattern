@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Our app</title>
+  <link href="{% static 'ourWebsite/styles.css'%}" rel="stylesheet">
+</head>
+
+<body>
+  <div class="banner">
+    <br> <br>
+    <div class="navbar">
+      <img src="{% static 'ourWebsite/images/image.png'%}" class="logo">
+      <div class="buttons">
+        <ul>
+          <li id="Home"><a href="{% url 'home'%}">Home </a></li>
+          <li><a href="{% url 'universities'%}">Universities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <br> <br> <br> <br> <br> <br>
+      <h1> Find your Major</h1>
+      <br> <br>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <div class="search">
+        <form class="example" action="{% url 'search'%}" method="get">
+          {% csrf_token %}
+          <input type="text" placeholder="Search..." name="q" value="{{request.GET.title}}">
+
+
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+
+      <br> <br> <br> <br> <br> <br> <br>
+      <h2>Description</h2>
+      <br><br><br>
+      <div class="descript">
+        <p>
+          This website will help you find your major among
+          Lebanese universities. The pool of universities is limited
+          for now. Just write your desired major in the box above, and let
+          the algorithm provide you with information.
+          If you still are unsure of your major, click on the following
+          link.
+          <br>
+          <a id="link" href="https://www.luc.edu/undergrad/academiclife/whatsmymajorquiz/"> LINK</a>
+        </p>
+
+
+      </div>
+
+
+    </div>
+  </div>
+</body>
+
+</html>
